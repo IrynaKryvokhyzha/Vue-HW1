@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <script
+      src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Task 1</title>
+  </head>
+  <body>
+    <h2>Задача 1.</h2>
+    <p>
+   Задача 1. Вводимо логіна і пароль. Якщо логін вірний відображаємо смайл. Якщо ні, то:
+		1) якщо логін = Іван – колір повідомлення про помилку синій
+		2) якщо хтось інший, то колір повідомлення червоний
+    </p>
+    <div id="app">
+		<div>
+			<label>
+				Login
+				<input type="text" v-model.lazy="userName" >
+			</label>
+		</div>
+		<div>
+			<label>
+				Password
+				<input type="password" v-model.lazy="userPassword">
+			</label>
+		</div>
+		<div>
+			<button type="submit" @click="isAuthorized" >Go</button>
+		</div>
+		<div >
+			<div  v-if="isAuthorized">
+				<img :src="smileImage" alt="image" class="smile-img">
+			</div>
+			<div v-else-if="errorMessageColor" :class="errorMessageColor" >{{errorMessage}}</div>
+
+		</div>
+		
+
+	 </div>
+
+
+<script src = "js/script.js"></script>
+  </body>
+</html>

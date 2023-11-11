@@ -1,0 +1,12 @@
+[
+	{ "id": 1, "title": "Смартфон iPhone 13", "price": 999.99 },
+	{ "id": 2, "title": "Ноутбук Dell XPS 13", "price": 1399.99 },
+	{ "id": 3, "title": "Телевізор Samsung QLED Q80A", "price": 799.99 },
+	{ "id": 4, "title": "Фотокамера Canon EOS 5D Mark IV", "price": 2499.99 },
+	{ "id": 5, "title": "Наушники Sony WH-1000XM4", "price": 299.99 },
+	{ "id": 6, "title": "Кавоварка Breville Barista Express", "price": 599.99 },
+	{ "id": 7, "title": "Книга 'Війна і мир' Л. Толстого", "price": 19.99 },
+	{ "id": 8, "title": "Ігрова консоль Xbox Series X", "price": 499.99 },
+	{ "id": 9, "title": "Футболка Adidas Originals", "price": 29.99 },
+	{ "id": 10, "title": "Шоколадний набір Godiva", "price": 39.99 }
+]

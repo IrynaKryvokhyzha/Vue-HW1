@@ -1,0 +1,35 @@
+body{
+	padding: 20px;
+	background-image: linear-gradient(to right, rgb(250, 123, 123) , rgb(227, 227, 89));
+	font-size: 20px;
+
+}
+button{
+	margin: 10px;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 10px;
+	background-image: linear-gradient(to right, rgb(238, 37, 37) , rgb(181, 181, 10));
+	font-weight: 700;
+	@media (any-hover: hover){
+		&:hover{
+			background-image: linear-gradient(to right, rgb(181, 181, 10), rgb(200, 17, 17) );
+		}
+	}
+}
+.columns{
+	display: flex;
+	gap: 50px;
+	padding: 20px;
+
+}
+h3{
+	text-align: center;
+}
+.list{
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 300px;
+	min-height: 500px;
+	border: 2px solid black;
+}

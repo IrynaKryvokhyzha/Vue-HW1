@@ -1,0 +1,9 @@
+body{
+	padding: 20px;
+	background-image: linear-gradient(to right, rgb(250, 123, 123) , rgb(227, 227, 89));
+	font-size: 20px;
+	font-weight: 700;
+}
+.img{
+	max-width: 900px;
+}

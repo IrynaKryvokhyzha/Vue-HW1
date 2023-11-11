@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <script
+      src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Task 2</title>
+  </head>
+  <body>
+    <h2>Задача 2.</h2>
+    <p>
+Задача 2. З випадаючого списку вибираємо клас квитка у літаку. Якщо 
+1) бізнес -  виводимо елементи для вибору газети та коньяку (якщо вибрано коньяк, то запропонувати закуску (так/ні)), на фоні зображення бізнес кают 
+2) економ – виводимо елементи для вибору типу пива і чипсів, на фоні хмарки.
+
+    </p>
+    <div id="app">
+		<h5>Оберіть клас квитка</h5>
+      <select name="flight-class" v-model="ticketClass">
+			<option value="business"  >Бізнес клас</option>
+			<option value="economy" >Економ клас</option>
+		</select>
+		<template v-if="ticketClass === 'business'">
+			<h5>Зробіть вибір</h5>
+			<form action="#" method="post">
+				<fieldset>
+					<label >
+						<input type="radio" name="relax">Газета
+					</label>
+					<label for="drinks">
+						<input type="radio" name="relax" v-model="drinks">Коньяк
+					</label>
+					<div v-if="drinks">
+						<label for="yes"> Бажаєте закуску?
+							<input type="radio" name="snack">Так
+						</label>
+						<label for="no">
+							<input type="radio" name="snack" >Ні
+						</label>
+					</div>
+				</fieldset> 
+			</form>
+				<img :src="businessImg" class="img" alt="image">
+		</template>
+		<template v-if="ticketClass === 'economy'">
+			<h5>Зробіть вибір</h5>
+			<form action="#" method="post">
+				<fieldset>
+					<label >
+						<input type="radio" name="economRelax">Пиво
+					</label>
+					<label for="drinks">
+						<input type="radio" name="economRelax" >Чіпси
+					</label>
+				</fieldset> 
+			</form>
+			<img :src="economImg" class="img" alt="image">
+		</template >
+		
+    </div>
+
+<script src = "js/script.js"></script>
+  </body>
+</html>

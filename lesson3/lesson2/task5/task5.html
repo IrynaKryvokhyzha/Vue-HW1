@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script
+      src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Task 5</title>
+  </head>
+  <body>
+    <h2>Задача 5.</h2>
+    <p>
+	Самостійно сформуйте масив даних та виведіть фрагмент на зразок поданого (дані не обов’язково повинні співпадати)
+    </p>
+    <div id="app">
+		<div v-for="(website, index) in dataArray" :key="website.id">
+			<div class="top">
+				<div class="image">
+					<img :src="website.logoSrc" alt="logo">
+				</div>
+				<div class="titles">
+					<h3 class="website-name">{{website.name}}</h3>
+					<a class="website-href" href="website.href">{{website.href}}</a>
+				</div>
+			</div>
+			<p class="website-title">{{website.title}}</p>
+			<p class="website-description">{{website.description}}</p>
+		</div>
+    </div>
+
+<script src = "js/script.js"></script>
+  </body>
+</html>

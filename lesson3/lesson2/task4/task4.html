@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <script
+      src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Task 4</title>
+  </head>
+  <body>
+    <h2>Задача 4.</h2>
+    <p>
+ Вивести список як маркований список з елементами у форматі (name: salary)
+    </p>
+    <div id="app">
+		<div v-for="(worker, index) in workerList" :key="worker.id">
+			<li>
+				<ul>
+					<div>{{worker.name}} : {{worker.salary}}</div>
+				</ul>
+			</li>
+		</div>
+    </div>
+
+<script src = "js/script.js"></script>
+  </body>
+</html>

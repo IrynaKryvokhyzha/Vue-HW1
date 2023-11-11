@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <script
+      src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Task 3</title>
+  </head>
+  <body>
+    <h2>Задача 3.</h2>
+    <p>
+	Елемент тренажера англійської. 
+	Виводимо зображення елемента і слово. Користувач вводить відповідь. 
+	Якщо вірно – відтворюємо фразу «Добре. Молодець!» (і додаємо зелену рамку до елемента), якщо ні - то відтворюємо фразу «Невірно, спробуйте ще раз» (і додаємо червону рамку).
+    </p>
+    <div id="app">
+		<div>
+			<div>
+				<img :class="imgBorder" :src="currentWord.imgSrc" alt="image">
+			</div>
+			<div class="word">{{currentWord.word}}</div>
+			<div>
+				<label>
+					<p>Ваш переклад українською:</p>
+					<input type="text" v-model="userAnswer">
+				</label>
+			</div>
+			<button type="submit" @click="answerCheck">Перевірити</button>
+			<div>{{feedback}}</div>
+			<button v-if="correctAnswer === true" type="submit" @click="nextWord">Наступне слово</button>
+		</div>
+    </div>
+
+<script src = "js/script.js"></script>
+  </body>
+</html>
